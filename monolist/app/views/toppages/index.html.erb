@@ -4,7 +4,6 @@
       <div class="cover-contents">
         <h1>素敵なモノと出会う場所</h1>
         <% if !logged_in? %>
-          <h1>素敵なモノと出会う場所</h1> 
           <%= link_to "モノリストを始める", signup_path, class:"btn btn-success btn-lg" %> 
         <% end %>
       </div>
@@ -12,4 +11,4 @@
   </div>
 <% end %>
 
-<p>テスト</p>
+<%= render "items/items", items: @items %>
